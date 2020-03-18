@@ -6,6 +6,6 @@ import './plugins'
 locations.init().then(
     res => {
         console.log(res)
-        console.log(locations.getCitiesByCountryCode('PE'))
+        console.log(locations)
     })
 
