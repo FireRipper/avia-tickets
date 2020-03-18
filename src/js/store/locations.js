@@ -22,6 +22,10 @@ class Locations {
         return response
     }
 
+    getCityCodeByKey(key) {
+        return this.cities[key].code
+    }
+
     createShortCitiesList(cities) {
         return Object.entries(cities).reduce((acc, [key]) => {
             acc[key] = null
@@ -53,8 +57,9 @@ class Locations {
         return this.countries[code].name
     }
 
-    getCitiesByCountryCode(code) {
-        return this.cities.filter(city => city.country_code === code)
+    async fetchTickets(params) {
+        const response = await this.api.prices(params)
+        return response.data
     }
 }
 
