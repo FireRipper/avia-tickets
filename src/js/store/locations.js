@@ -6,9 +6,10 @@ class Locations {
         this.api = api
         this.countries = null
         this.cities = null
-        this.shortCitiesList = null
+        this.shortCitiesList = {}
         this.airlines = null
         this.formatDate = helpers.formatDate
+        this.lastSearch = {}
     }
 
     async init() {
@@ -99,7 +100,7 @@ class Locations {
 
     async fetchTickets(params) {
         const response = await this.api.prices(params)
-        console.log(this.serializeTickets(response.data))
+        return this.lastSearch = this.serializeTickets(response.data)
     }
 }
 
