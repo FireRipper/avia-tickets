@@ -10,6 +10,7 @@ class Locations {
         this.airlines = null
         this.formatDate = helpers.formatDate
         this.lastSearch = {}
+        this.ticketsObj = {}
     }
 
     async init() {
@@ -88,6 +89,7 @@ class Locations {
         return Object.values(tickets).map(ticket => {
             return {
                 ...ticket,
+                _id: Math.random() * 10 / 25,
                 origin_name: this.getCityNameByCode(ticket.origin),
                 destination_name: this.getCityNameByCode(ticket.destination),
                 airline_logo: this.getAirlineLogoByCode(ticket.airline),
@@ -96,6 +98,13 @@ class Locations {
                 return_at: this.formatDate(ticket.return_at, 'dd MMM yyyy hh:mm'),
             }
         })
+    }
+
+    convertTicketsToObject(tickets) {
+        this.ticketsObj = tickets.reduce((acc, elem) => {
+            acc[elem._id] = elem
+            return acc
+        }, {})
     }
 
     async fetchTickets(params) {
