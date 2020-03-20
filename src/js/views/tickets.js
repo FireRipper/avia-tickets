@@ -4,6 +4,7 @@ class TicketsUI {
     constructor(currency) {
         this.container = document.querySelector('.tickets-sections .row')
         this.getCurrencySymbol = currency.getCurrencySymbol.bind(currency)
+        this.ticketsSections = document.querySelector('.tickets-sections')
     }
 
     renderTickets(tickets) {
@@ -44,10 +45,11 @@ class TicketsUI {
     static ticketTemplate(ticket, currency) {
         return `
         <div class="col s12 m6">
-            <div class="card ticket-card">
+            <div class="card ticket-card" data-ticket-id=${ticket._id}>
               <div class="ticket-airline d-flex align-items-center">
                 <img
                   src=${ticket.airline_logo}
+                  alt=${ticket.airline_name}
                   class="ticket-airline-img"
                 />
                 <span class="ticket-airline-name"
@@ -72,6 +74,8 @@ class TicketsUI {
                 <span class="ticket-transfers">Пересадок: ${ticket.transfers}</span>
                 <span class="ticket-flight-number">Номер рейса: ${ticket.flight_number}</span>
               </div>
+              <a class="waves-effect waves-light btn-small green darken-1 add-favorite ml-auto"
+                >Add to favorites</a>
             </div>
           </div>
         `
