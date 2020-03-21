@@ -1,8 +1,9 @@
 import api from '../services/api-service'
 import { formatDate } from '../helpers/date'
+import config from '../config/api-config'
 
 class Locations {
-    constructor(api, helpers) {
+    constructor(api, helpers, config) {
         this.api = api
         this.countries = null
         this.cities = null
@@ -11,6 +12,7 @@ class Locations {
         this.formatDate = helpers.formatDate
         this.lastSearch = {}
         this.ticketsObj = {}
+        this.urlImg = config.urlImg
     }
 
     async init() {
@@ -55,7 +57,7 @@ class Locations {
 
     serializeAirlines(airlines) {
         return airlines.reduce((acc, item) => {
-            item.logo = `http://pics.avs.io/200/200/${item.code}.png`
+            item.logo = `${this.urlImg}/${item.code}.png`
             item.name = item.name || item.name_translations.en
             acc[item.code] = item
             return acc
@@ -113,7 +115,7 @@ class Locations {
     }
 }
 
-const locations = new Locations(api, { formatDate })
+const locations = new Locations(api, { formatDate }, config)
 
 export default locations
 

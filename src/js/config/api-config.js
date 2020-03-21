@@ -1,5 +1,6 @@
 const config = {
-    url: 'http://aviasales-api.herokuapp.com'
+    url: 'https://aviasales-api.herokuapp.com',
+    urlImg: 'https://pics.avs.io/200/200'
 }
 
  export default config
