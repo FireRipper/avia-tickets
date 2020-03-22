@@ -11,17 +11,17 @@ Also, if you didn't fill all fields (apart from 'return date' one) You'll receiv
   <tr>
     <td>
       <a href="https://github.com/FireRipper/avia-tickets/tree/master/src/demo" title="Fill some fields">
-        <img src="https://github.com/FireRipper/avia-tickets/blob/master/src/demo/set-data.png" width="250" alt="Fill some fields">
+        <img src="https://github.com/FireRipper/avia-tickets/blob/master/src/demo/set-data.png" width="400" alt="Fill some fields">
       </a>
     </td>
     <td>
       <a href="https://github.com/FireRipper/avia-tickets/tree/master/src/demo" title="Result">
-        <img src="https://github.com/FireRipper/avia-tickets/blob/master/src/demo/request-result.png" width="250" alt="Result">
+        <img src="https://github.com/FireRipper/avia-tickets/blob/master/src/demo/request-result.png" width="400" alt="Result">
       </a>
     </td>
     <td>
       <a href="https://github.com/FireRipper/avia-tickets/tree/master/src/demo" title="Add to favorite">
-        <img src="https://github.com/FireRipper/avia-tickets/blob/master/src/demo/add-ticket-to-favorites.png" width="250" alt="Add to favorite">
+        <img src="https://github.com/FireRipper/avia-tickets/blob/master/src/demo/add-ticket-to-favorites.png" width="400" alt="Add to favorite">
       </a>
     </td>
   </tr>
