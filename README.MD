@@ -1,9 +1,32 @@
 # Avia tickets
 
 App for search airline tickets. You can set some parameters for search. 
-These are parameters: where - origin(city/country) to destination (city/country), when - depart date and return date. 
+These are parameters: where - origin(city/country) to destination (city/country), when - depart date and return date.
+Also you can choose a currency (dollar or euro).
 Result - tickets fonded or not founded. You can view available tickets and add some tickets to favorite (using button add to favorite).
 Also, if you didn't fill all fields (apart from 'return date' one) You'll receive a message: "Please, fill in all the fields".
+
+## Example
+<table>
+  <tr>
+    <td>
+      <a href="https://github.com/FireRipper/avia-tickets/tree/master/src/demo" title="Fill some fields">
+        <img src="https://github.com/FireRipper/avia-tickets/blob/master/src/demo/set-data.png" width="250" alt="Fill some fields">
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/FireRipper/avia-tickets/tree/master/src/demo" title="Result">
+        <img src="https://github.com/FireRipper/avia-tickets/blob/master/src/demo/request-result.png" width="250" alt="Result">
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/FireRipper/avia-tickets/tree/master/src/demo" title="Add to favorite">
+        <img src="https://github.com/FireRipper/avia-tickets/blob/master/src/demo/add-ticket-to-favorites.png" width="250" alt="Add to favorite">
+      </a>
+    </td>
+  </tr>
+</table>
+
 
 ## How to install
 
